@@ -1,21 +1,31 @@
 # vue-rotate
 
-> A Vue.js project
+> A Vue.js rotate component
 
-## Build Setup
+## 安装
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+```bash
+  npm install vue-rotate -S
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 使用
+
+```html
+<rotate :rotating="isRotating"></rotate>
+```
+
+```js
+import Rotate from 'vue-rotate'
+...
+export default {
+  data () {
+    return {
+      isRotating: true
+    }
+  },
+  components: {
+    Rotate
+  }
+}
+...
+```
