@@ -1,28 +1,62 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
+    <div class="wrapper">
+      <rotate ref="rotate" :rotating="rotating" :dps="dps">
+        <img id="logo" src="https://cn.vuejs.org/images/logo.png">
+      </rotate>
+    </div>
+    <button type="button" name="button" @click="rotating = true">旋转</button>
+    <button type="button" name="button" @click="rotating = false">停止</button>
+    <button type="button" name="button" @click="reset">重置</button>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+import Rotate from './lib/rotate.vue'
 
 export default {
   name: 'app',
+  data () {
+    return {
+      rotating: true,
+      dps: 50
+    }
+  },
   components: {
-    Hello
+    Rotate
+  },
+  methods: {
+    reset () {
+      this.$refs.rotate.reset()
+    }
   }
 }
 </script>
 
 <style>
+body {
+  background-color: #aaa;
+  padding: 0;
+  margin: 0;
+}
+.wrapper {
+  width: 100px;
+  margin: 20px auto;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+#logo {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
 }
 </style>
