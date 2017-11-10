@@ -16,7 +16,7 @@ module.exports = {
     filename: 'vue-rotate.js',
     publicPath: process.env.NODE_ENV === 'production'
       ? config.build.assetsPublicPath
-      : config.dev.assetsPublicPath
+      : (process.env.NODE_ENV === 'demo' ? config.demo.assetsPublicPath : config.dev.assetsPublicPath)
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],

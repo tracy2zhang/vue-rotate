@@ -8,6 +8,9 @@
     <button type="button" name="button" @click="rotating = true">旋转</button>
     <button type="button" name="button" @click="rotating = false">停止</button>
     <button type="button" name="button" @click="reset">重置</button>
+    <p>
+      <a href="https://github.com/tracy2zhang/vue-rotate">Docs</a>
+    </p>
   </div>
 </template>
 
@@ -35,7 +38,7 @@ export default {
 
 <style>
 body {
-  background-color: #aaa;
+  /*background-color: #aaa;*/
   padding: 0;
   margin: 0;
 }
