@@ -1,13 +1,14 @@
 {
   "name": "vue-rotate",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A Vue.js rotate component",
   "author": "utopia_one <601554019@qq.com>",
   "private": false,
   "license": "MIT",
   "main": "dist/vue-rotate.js",
   "files": [
-    "dist/"
+    "dist/",
+    "src/"
   ],
   "repository": {
     "type": "git",
